@@ -24,8 +24,9 @@ WORKDIR /usr/src/app
 COPY Gemfile /usr/src/app/
 COPY Gemfile.lock /usr/src/app/
 RUN bundle install
-
-COPY . /usr/src/app
+RUN gem install listen
+RUN gem install guard
+RUN gem install guard-rspec
 
 COPY create_ssh_link.sh /usr/src/app/
 RUN bash create_ssh_link.sh
