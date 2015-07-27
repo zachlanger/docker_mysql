@@ -43,6 +43,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>rake db:create db:test:prepare</command>
+      <command>rspec</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
