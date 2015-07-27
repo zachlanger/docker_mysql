@@ -1,9 +1,12 @@
 #!/bin/bash
+# Run in docker terminal
 
 cd jenkins_files
-bash build_jenkins.sh
+docker build -t zlanger/dockerjenkins .
+docker run -p 8080:8080 --name jenkins --privileged -d zlanger/dockerjenkins
 cd ..
 docker cp jenkins:/root/.ssh/id_rsa.pub $PWD/ubuntu_slave
 cd ubuntu_slave
-bash build_ubuntu_slave.sh
+docker build -t zlanger/dockerubuntu .
 rm id_rsa.pub
+docker run -p 5000:22 --name ubuntu_slave --privileged -t zlanger/dockerubuntu

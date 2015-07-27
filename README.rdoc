@@ -2,16 +2,11 @@ Ruby on Rails on Jenkins on Docker
   Kitematic recommended
   Fork and clone this Directory
   Docker names should not have spaces
+  Install supervisor
 
-Run:
-  bash build_all.sh
-  ctrl+c
-  docker exec -it ubuntu_slave /bin/bash
-  service ssh start
-  service mysql start
-  exit
-  docker exec -it jenkins /bin/bash
-  ssh IP_ADDRESS -p 5000
-  yes
-Open Jenkins in web browser and build
+
+Step 1: bash build_all.sh
+
+
+Open Jenkins in web browser and let it build itself
 DONE!!!

@@ -41,6 +41,5 @@ COPY slave1/* /opt/jenkins/data/nodes/slave1/
 COPY slave2/* /opt/jenkins/data/nodes/slave2/
 COPY credentials.xml /opt/jenkins/data/
 
-
 COPY generate_ssh.sh /
 RUN bash generate_ssh.sh

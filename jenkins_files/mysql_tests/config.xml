@@ -42,8 +42,8 @@
   <customWorkspace>/tmp/jenkins-buildenv/${JOB_NAME}/workspace</customWorkspace>
   <builders>
     <hudson.tasks.Shell>
-      <command>rake db:create db:test:prepare</command>
-      <command>rspec</command>
+      <command>rake db:create db:test:prepare
+        rspec</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
