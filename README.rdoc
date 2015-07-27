@@ -12,4 +12,5 @@ Open Jenkins in web browser and let it build itself
 For any extra slaves:
   docker run -p NEW_PORT:22 --name NEW_NAME --privileged -t zlanger/dockerubuntu
   Duplicate slave1 in Jenkins and specify port with NEW_PORT
+  Specify labels and tests to run in the job configs
 DONE!!!
