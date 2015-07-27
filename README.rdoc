@@ -1,4 +1,4 @@
-Ruby on Rails on Jenkins on Docker
+Ruby on Rails on a slave on Jenkins on Docker
   Kitematic recommended
   Fork and clone this Directory
   Docker names should not have spaces
@@ -9,4 +9,7 @@ Step 1: bash build_all.sh
 
 
 Open Jenkins in web browser and let it build itself
+For any extra slaves:
+  docker run -p NEW_PORT:22 --name NEW_NAME --privileged -t zlanger/dockerubuntu
+  Duplicate slave1 in Jenkins and specify port with NEW_PORT
 DONE!!!
