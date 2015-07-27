@@ -1,0 +1,9 @@
+Started on Jul 24, 2015 11:19:00 PM
+Using strategy: Default
+[poll] Last Built Revision: Revision 896348aacd1d8cfc100e61ba1d55231e377a51e5 (refs/remotes/origin/master)
+ > git --version # timeout=10
+ > git -c core.askpass=true ls-remote -h https://github.com/zachlanger/mysql.git # timeout=10
+Found 1 remote heads on https://github.com/zachlanger/mysql.git
+[poll] Latest remote head revision on refs/heads/master is: 896348aacd1d8cfc100e61ba1d55231e377a51e5 - already built by 3
+Done. Took 0.51 sec
+No changes

@@ -13,6 +13,7 @@ RUN apt-get install zlib1g-dev
 RUN apt-get install ruby-dev
 RUN apt-get install libsqlite3-dev
 RUN apt-get install -y libmysqlclient-dev
+RUN apt-get install -y mysql-server
 
 
 RUN apt-get update && apt-get install -y nodejs --no-install-recommends && rm -rf /var/lib/apt/lists/*
@@ -28,7 +29,7 @@ RUN gem install listen
 RUN gem install guard
 RUN gem install guard-rspec
 
+RUN mkdir -p /root/.ssh
+COPY id_rsa.pub /root/.ssh/
 COPY create_ssh_link.sh /usr/src/app/
 RUN bash create_ssh_link.sh
-
-RUN apt-get update && apt-get install -y mysql-server

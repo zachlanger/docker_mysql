@@ -25,10 +25,22 @@ ADD ./dockerjenkins.sh /usr/local/bin/dockerjenkins.sh
 RUN chmod +x /usr/local/bin/dockerjenkins.sh
 
 RUN apt-get -y install openssh-client
-RUN ssh-keygen -q -t rsa -N '' -f /id_rsa
+RUN apt-get -y install git
 
 VOLUME /var/lib/docker
 
 EXPOSE 8080
 
 ENTRYPOINT [ "/usr/local/bin/dockerjenkins.sh" ]
+
+RUN mkdir -p /opt/jenkins/data/jobs/mysql_tests
+RUN mkdir -p /opt/jenkins/data/nodes/slave1
+RUN mkdir -p /opt/jenkins/data/nodes/slave2
+COPY mysql_tests/* /opt/jenkins/data/jobs/mysql_tests/
+COPY slave1/* /opt/jenkins/data/nodes/slave1/
+COPY slave2/* /opt/jenkins/data/nodes/slave2/
+COPY credentials.xml /opt/jenkins/data/
+
+
+COPY generate_ssh.sh /
+RUN bash generate_ssh.sh
