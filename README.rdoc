@@ -6,7 +6,7 @@ Ruby on Rails on a slave on Jenkins on Docker
 
 
 Step 1: bash build_all.sh
-
+Step 2: Celebrate
 
 Open Jenkins in web browser and let it build itself
 For any extra slaves:
