@@ -16,7 +16,7 @@ Run:
 Open Jenkins in web browser and build
 
 
-Have Jenkins watch git repo
+#Have Jenkins watch git repo
   Go to your github repo for the test you're running
   On the right side click 'Settings', then 'Webhooks & Services'
   Select 'Add service' and find 'Jenkins (Git plugin)'

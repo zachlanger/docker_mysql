@@ -6,3 +6,4 @@ cd ..
 docker cp jenkins:/root/.ssh/id_rsa.pub $PWD/ubuntu_slave
 cd ubuntu_slave
 bash build_ubuntu_slave.sh
+rm id_rsa.pub
