@@ -6,12 +6,16 @@ Ruby on Rails on a slave on Jenkins on Docker
   Install supervisor
 
 
-Step 1: bash build_all.sh
-  It will have finished when 'success: mysql entered RUNNING state,' is printed
-Step 2: Ctrl+c
-Step 3: docker run -p 5011:22 --name ubuntu_slave2 -t zlanger/dockerubuntu
+Step 1:
+  bash build_all.sh
+  It's finished when 'success: mysql entered RUNNING state,' is printed
+Step 2:
+  Ctrl+c
+Step 3:
+  docker run -p 5011:22 --name ubuntu_slave2 -t zlanger/dockerubuntu
 
 Open Jenkins in web browser and let it build itself (may have to relaunch slave)
+
 For any extra slaves:
   docker run -p NEW_PORT:22 --name NEW_NAME --privileged -t zlanger/dockerubuntu
   Duplicate slave1 in Jenkins and specify port with NEW_PORT
