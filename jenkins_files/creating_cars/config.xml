@@ -24,7 +24,7 @@
     <submoduleCfg class="list"/>
     <extensions/>
   </scm>
-  <assignedNode>mysql</assignedNode>
+  <assignedNode>mysql2</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
@@ -43,7 +43,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>rake db:create db:test:prepare
-        rspec</command>
+        rspec spec/features/creating_cars_spec.rb</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>

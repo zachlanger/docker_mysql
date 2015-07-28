@@ -6,7 +6,6 @@ RUN apt-get -y update
 RUN apt-get install -y ruby
 RUN apt-get install -y rails
 RUN apt-get install -y openjdk-7-jdk
-RUN apt-get install -y vim
 RUN apt-get install -y openssh-server
 RUN apt-get install -y supervisor
 RUN apt-get install -y git
@@ -32,7 +31,7 @@ COPY Gemfile.lock /usr/src/app/
 # Install gems
 RUN bundle install
 RUN gem install listen
-RUN gem install guard
+RUN gem install guard -v 2.12.9
 RUN gem install guard-rspec
 
 # Create ssh link

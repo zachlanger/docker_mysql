@@ -35,10 +35,14 @@ EXPOSE 8080
 ENTRYPOINT [ "/usr/local/bin/dockerjenkins.sh" ]
 
 # Setup jobs and slaves
-RUN mkdir -p /opt/jenkins/data/jobs/mysql_tests
+RUN mkdir -p /opt/jenkins/data/jobs/car_creation
+RUN mkdir -p /opt/jenkins/data/jobs/creating_cars
 RUN mkdir -p /opt/jenkins/data/nodes/slave1
-COPY mysql_tests/* /opt/jenkins/data/jobs/mysql_tests/
+RUN mkdir -p /opt/jenkins/data/nodes/slave2
+COPY car_creation/* /opt/jenkins/data/jobs/car_creation/
+COPY creating_cars/* /opt/jenkins/data/jobs/creating_cars/
 COPY slave1/* /opt/jenkins/data/nodes/slave1/
+COPY slave2/* /opt/jenkins/data/nodes/slave2/
 COPY credentials.xml /opt/jenkins/data/
 
 # Create ssh key

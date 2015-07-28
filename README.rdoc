@@ -1,14 +1,16 @@
 Ruby on Rails on a slave on Jenkins on Docker
   Kitematic recommended
   Fork and clone this Directory
-  Docker names should not have spaces
+  In jenkins_files, under car_creation & creating_cars, change lines
+    8 & 15 of both config.xml files from zachlanger to your github username.
   Install supervisor
 
 
 Step 1: bash build_all.sh
-Step 2: Celebrate
+Step 2: After 'mysql entered RUNNING state' is outputted, Ctrl+c
+Step 3: docker run -p 5011:22 --name ubuntu_slave2 -t zlanger/dockerubuntu
 
-Open Jenkins in web browser and let it build itself
+Open Jenkins in web browser and let it build itself (may have to relaunch slave)
 For any extra slaves:
   docker run -p NEW_PORT:22 --name NEW_NAME --privileged -t zlanger/dockerubuntu
   Duplicate slave1 in Jenkins and specify port with NEW_PORT
