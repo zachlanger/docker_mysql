@@ -3,7 +3,7 @@ Ruby on Rails on a slave on Jenkins on Docker
   Fork and clone this Directory
   In jenkins_files, under car_creation & creating_cars, change lines 8 & 15 of
   both config.xml files from zachlanger to your github username. Also change
-  line 11 to your IP Address.
+  the 11th lines to your IP Address.
 
 
 Step 1:
