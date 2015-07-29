@@ -46,5 +46,4 @@ COPY slave2/* /opt/jenkins/data/nodes/slave2/
 COPY credentials.xml /opt/jenkins/data/
 
 # Create ssh key
-COPY generate_ssh.sh /
-RUN bash generate_ssh.sh
+RUN ssh-keygen -q -b 4096 -t rsa -f /root/.ssh/id_rsa -P ""
