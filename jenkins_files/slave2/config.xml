@@ -7,7 +7,7 @@
   <mode>NORMAL</mode>
   <retentionStrategy class="hudson.slaves.RetentionStrategy$Always"/>
   <launcher class="hudson.plugins.sshslaves.SSHLauncher" plugin="ssh-slaves@1.9">
-    <host>IPADDRESS2</host>
+    <host>192.168.99.100</host>
     <port>5011</port>
     <credentialsId>d4e136b0-8378-4388-8abe-9d4304bd7bdf</credentialsId>
     <maxNumRetries>0</maxNumRetries>

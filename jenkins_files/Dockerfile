@@ -41,8 +41,8 @@ RUN mkdir -p /opt/jenkins/data/nodes/slave1
 RUN mkdir -p /opt/jenkins/data/nodes/slave2
 COPY car_creation/* /opt/jenkins/data/jobs/car_creation/
 COPY creating_cars/* /opt/jenkins/data/jobs/creating_cars/
-# COPY slave1/* /opt/jenkins/data/nodes/slave1/
-# COPY slave2/* /opt/jenkins/data/nodes/slave2/
+COPY slave1/* /opt/jenkins/data/nodes/slave1/
+COPY slave2/* /opt/jenkins/data/nodes/slave2/
 COPY credentials.xml /opt/jenkins/data/
 
 # Create ssh key
