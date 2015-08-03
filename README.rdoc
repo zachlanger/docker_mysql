@@ -8,11 +8,8 @@ Ruby on Rails on a slave on Jenkins on Docker
 
 Step 1:
   bash build_all.sh
-  It's finished when 'success: mysql entered RUNNING state,' is printed
 Step 2:
-  Ctrl+c
-Step 3:
-  docker run -p 5011:22 --name ubuntu_slave2 -t zlanger/dockerubuntu
+  Find a hobby to spend all your new found free time on
 
 Open Jenkins in web browser and let it build itself (may have to relaunch slaves)
 
