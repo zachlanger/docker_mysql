@@ -1,4 +1,0 @@
---color
---require spec_helper
---format JUnit
---out spec/reports/report.xml

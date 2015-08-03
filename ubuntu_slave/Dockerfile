@@ -11,7 +11,7 @@ RUN apt-get install -y supervisor
 RUN apt-get install -y git
 RUN apt-get install zlib1g-dev
 RUN apt-get install ruby-dev
-RUN apt-get install libsqlite3-dev
+RUN apt-get install -y libsqlite3-dev
 RUN apt-get install -y libmysqlclient-dev
 RUN apt-get install -y mysql-server
 
@@ -32,7 +32,7 @@ COPY Gemfile.lock /usr/src/app/
 RUN bundle install
 RUN gem install listen
 RUN gem install guard -v 2.12.9
-RUN gem install guard-rspec
+RUN gem install guard-rspec -v 4.6.3
 
 # Create ssh link
 RUN mkdir -p /root/.ssh
@@ -42,4 +42,4 @@ RUN bash create_ssh_link.sh
 
 # Start mysql and ssh
 EXPOSE 22 80
-CMD ["/usr/bin/supervisord"]
+CMD ["/usr/bin/supervisord","-c","/etc/supervisor/conf.d/supervisord.conf"]

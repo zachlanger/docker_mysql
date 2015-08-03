@@ -1,5 +1,5 @@
 #!/bin/bash
-# Run in docker terminal
+# Run in a docker terminal
 
 cd jenkins_files
 docker build -t zlanger/dockerjenkins .
